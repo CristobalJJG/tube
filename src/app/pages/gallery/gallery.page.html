@@ -1,0 +1,11 @@
+@if(items.length >= 1){
+<div class="grid">
+    @for(i of items; track i){
+        <Card [video]="i"/>
+    }
+</div>
+}@else{
+    <div class="loader">
+        <Loader/>
+    </div>
+}
