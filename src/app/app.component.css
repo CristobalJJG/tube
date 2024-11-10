@@ -1,0 +1,14 @@
+:host{
+    display:grid;
+    grid-template-areas: 's m m m m m';
+    width: 100dvw;
+    height: 100dvh;
+}
+
+Sidebar{
+    grid-area: s;
+}
+
+main{
+    grid-area: m;
+}
