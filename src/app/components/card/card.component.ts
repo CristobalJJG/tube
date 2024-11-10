@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Video } from '../../pages/gallery/gallery.page';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-card',
+  selector: 'Card',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './card.component.html',
-  styleUrl: './card.component.css'
+  styleUrl: './card.component.scss'
 })
 export class CardComponent {
-
+  @Input() video!: Video;
+  constructor(){}
 }

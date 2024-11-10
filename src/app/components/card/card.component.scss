@@ -1,0 +1,38 @@
+$ch: 325px;
+$cw: 470px;
+$ih:250px;
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    width: $cw;
+    height: $ch;
+    border-radius: 10px;
+    background: #e0e0e0;
+    cursor: pointer;
+    margin: 20px 0px;
+    transition: background .3s ease-in-out ;
+
+    &:hover{
+        background: #f0f0f0;
+    }
+}
+
+.image{
+    object-fit: cover;
+    width: 100%;
+    height: $ih;
+    border-radius: 10px 10px 0 0;
+}
+
+.title{
+    text-align: center;
+    font-size: large;
+    text-overflow: ellipsis;
+    text-wrap: hidden;
+    overflow: hidden;
+    height: calc($ch - $ih);
+}

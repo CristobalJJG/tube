@@ -1,1 +1,6 @@
-<p>card works!</p>
+<a [routerLink]="['/video', video.videoId]">
+    <div class="card" >
+        <img src="{{video.thumbnailUrl}}" alt="{{video.title}}" class="image">
+        <h2 class="title">{{video.title}}</h2>
+    </div>
+</a>
