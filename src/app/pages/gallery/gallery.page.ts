@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { CardComponent } from '../../components/card/card.component';
-import * as data from './response.json';
 import { LoaderComponent } from '../../components/loader/loader.component';
 import { YoutubeService } from '../../services/youtube.service';
 import { Router } from '@angular/router';
+import { Video } from '../../types/Video';
 
 @Component({
   selector: 'Gallery',
@@ -16,17 +16,11 @@ import { Router } from '@angular/router';
 export class GalleryPage {
   items: Video[] = [];
 
-  constructor(private ys:YoutubeService){
-    //La llamada yha va a retornar esto
-    this.items 
-    ys.searchByKeyword('Recetas').then((i:Video[]) => {
+  constructor(private ys: YoutubeService) {
+    /* this.items
+    ys.searchByKeyword('Recetas').then((i: Video[]) => {
       this.items = i
-    });
+    }); */;
+    this.items = this.ys.returnDataFromJson('Recetas');
   }
-}
-
-export interface Video{
-  videoId: string,
-  thumbnailUrl:string,
-  title:string,
 }
