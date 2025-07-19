@@ -21,6 +21,8 @@ export class GalleryPage {
     ys.searchByKeyword('Recetas').then((i: Video[]) => {
       this.items = i
     }); */;
-    this.items = this.ys.returnDataFromJson('Recetas');
+    setTimeout(() => {
+      this.items = this.ys.returnDataFromJson('Recetas');
+    }, 1000);
   }
 }

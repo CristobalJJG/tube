@@ -3,19 +3,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.name span {
-    font-weight: bold;
+    > span {
+        font-weight: bold;
 
-    &.nano {
-        padding: 10px 2px;
-    }
+        &.nano {
+            padding: 10px 2px;
+        }
 
-    &.tube {
-        color: whitesmoke;
-        border-radius: 10px;
-        padding: 10px 10px;
+        &.tube {
+            color: whitesmoke;
+            border-radius: 10px;
+            padding: 10px 10px;
+        }
     }
 }
 
