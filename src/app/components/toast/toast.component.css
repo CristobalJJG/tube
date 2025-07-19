@@ -1,0 +1,22 @@
+.alert {
+    border: 0;
+    color: var(--color-zinc-800);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.alert-error {
+    background-color: #f56565;
+}
+
+.alert-success {
+    background-color: #5cb85c;
+}
+
+.alert-warning {
+    background-color: #f0ad4e;
+}
+
+.alert-info {
+    background-color: #5bc0de;
+}

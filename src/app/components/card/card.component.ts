@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { Video } from '../../types/Video'; 
+import { Video } from '../../types/Video';
 import { RouterModule } from '@angular/router';
+import { ToastService } from '../../services/toast.service';
 
 @Component({
   selector: 'Card',
@@ -11,5 +12,9 @@ import { RouterModule } from '@angular/router';
 })
 export class CardComponent {
   @Input() video!: Video;
-  constructor(){}
+  constructor(private toastService: ToastService) { }
+
+  mostrarToast() {
+    this.toastService.show('Mensaje de hola', 'error', 50000);
+  }
 }

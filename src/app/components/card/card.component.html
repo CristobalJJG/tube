@@ -1,4 +1,5 @@
-<a [routerLink]="['/video', video.videoId]" class="card bg-base-100 w-78 shadow-sm">
+<!--a [routerLink]="['/video', video.videoId]" class="card bg-base-100 w-78 shadow-sm"-->
+<a (click)="mostrarToast()" class="card bg-base-100 w-78 shadow-sm">
     <img src="{{video.thumbnailUrl}}" alt="{{video.title}}" loading="lazy" />
     <div class="card-body">
         <h2 class="card-title">{{video.title}}</h2>
