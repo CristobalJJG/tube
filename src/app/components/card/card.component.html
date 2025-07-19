@@ -1,6 +1,6 @@
-<a [routerLink]="['/video', video.videoId]">
-    <div class="card" >
-        <img src="{{video.thumbnailUrl}}" alt="{{video.title}}" class="image">
-        <h2 class="title">{{video.title}}</h2>
+<a [routerLink]="['/video', video.videoId]" class="card bg-base-100 w-78 shadow-sm">
+    <img src="{{video.thumbnailUrl}}" alt="{{video.title}}" loading="lazy" />
+    <div class="card-body">
+        <h2 class="card-title">{{video.title}}</h2>
     </div>
 </a>
