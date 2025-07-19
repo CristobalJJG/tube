@@ -9,6 +9,13 @@ export class ToastService {
 
   toastState$ = this.toastSubject.asObservable();
 
+  /* 
+   * constructor(private toastService: ToastService) { }
+   * showToast() {
+   *   this.toastService.show('Mensaje de ejemplo', 'success', 4000);
+   * }
+   */
+
   show(message: string, type: string = 'info', duration: number = 3000) {
     this.toastSubject.next({ message, type, visible: true });
     setTimeout(() => {
