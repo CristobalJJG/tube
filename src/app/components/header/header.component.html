@@ -15,4 +15,10 @@
         </label>
         <button class="btn btn-error text-zinc-100 join-item rounded-r-full">Buscar</button>
     </div>
+    <button class="btn"
+        (mousedown)="onVoiceSearchStart()"
+        (mouseup)="onVoiceSearchStop()"
+        (mouseleave)="onVoiceSearchStop()">
+  Buscar por voz
+</button>
 </div>

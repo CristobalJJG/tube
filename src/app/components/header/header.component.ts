@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VoiceRecognitionService } from '../../services/voice-recognition.service';
 
 @Component({
   selector: 'Header',
@@ -8,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  constructor(private voiceService: VoiceRecognitionService) { }
 
+  onVoiceSearchStart() {
+    this.voiceService.startRecognition();
+  }
+
+  onVoiceSearchStop() {
+    this.voiceService.stopRecognition();
+  }
 }
